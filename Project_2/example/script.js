@@ -20,9 +20,36 @@ var plot2 = d3.select('#plot2') // if we select a html id #name, if we select a 
 
 // var url = 'https://api.darksky.net/forecast/c6b293fcd2092b65cfb7313424b2f7ff/42.361145,-71.057083'
 
-d3.json("../data/boston_weather.json",draw);
+d3.json("../data/boston_weather.json", draw);
 
 function draw(error,data){
+    console.log(data);
+//    for (i = 0; i < 7; i++) {
+//        var x = data.daily.data;
+//        var sunrise = new Date(x[i].sunriseTime*1000).toLocaleString();
+//        var sunset = new Date(x[i].sunsetTime*1000).toLocaleString();
+//        var min = new Date(x[i].temperatureLowTime*1000).toLocaleString();
+//        var low = x[i].temperatureLow;
+//        var max = new Date(x[i].temperatureHighTime*1000).toLocaleString();
+//        var high = x[i].temperatureHigh;
+//        var avg = ((high+low)/2)
+//        console.log(sunrise);
+//        console.log(sunset);
+//        console.log(min);
+//        console.log(low);
+//        console.log(max);
+//        console.log(high);
+//        console.log(avg);
+//        console.log("----------");
+//        console.log(" ");
+//    }
+//    
+//    for (i = 0; i < 24; i++) {
+//        var x = data.hourly.data;
+//        console.log(x[i].windSpeed);
+//        console.log("----------");
+//        console.log(" ");
+//    }
 
     //PLOT 1 - today's weather
     var todayWeather = data.hourly.data;
@@ -194,7 +221,7 @@ function draw(error,data){
 
     var axisWeekX = d3.axisBottom().scale(scaleX2).ticks(8).tickFormat(formatWeek),
         axisWeekY = d3.axisLeft().scale(scaleY2).tickSizeInner(-width1).tickPadding([10]).ticks(5);
-    
+
     plot2.select(".axis-x").call(axisWeekX);
     plot2.select(".axis-y").call(axisWeekY);
 

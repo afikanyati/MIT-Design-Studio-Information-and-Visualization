@@ -23,6 +23,8 @@ var mapYears = data.map(function(d){return d.year});
 // both domain and range need to have an array between the brackets
 var scaleXPlot1 = d3.scaleBand().domain(mapYears).rangeRound([0, width1]).padding(0.5);
 
+// console.log(2005, scaleXPlot1(2005));
+
 // 2 get the minimum and maximum values
 var maxFruit = d3.max(data,function(d){return d.fruit});
 // var minFruit = d3.min(data,function(d){return d.fruit});
@@ -41,6 +43,7 @@ var axisBarChartX = d3.axisBottom().scale(scaleXPlot1).ticks(),
 plot1.select(".axis-x").call(axisBarChartX);
 plot1.select(".axis-y").call(axisBarChartY);
 
+// BARS
 plot1.select('.bars')
     .selectAll(".barsFruit") //select a Bar that we will create in a few steps
     .data(data) //select the data

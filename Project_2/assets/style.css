@@ -1,0 +1,267 @@
+/* Stores all CSS variable */
+:root {
+    --dark-gray: #212323;
+    --dark-purple: #190f27;
+    --transluscent-dark-purple: rgba(25, 15, 39, 0.87);
+    --light-purple: #5a4570;
+    --mid-gray: #989898;
+    --light-gray: #dededd;
+    --cream : #dbd7cf;
+    --white: #ffffff;
+    --transluscent-white: rgba(255, 255, 255, 0.8);
+    --body-text-color: rgba(35,31,32, 0.87);
+    --heading-font: "ArcaMajora" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --heading-weight: 800;
+    --body-font: "Lato" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --body-font-italic: "LatoItalic" , "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --code-font: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	color: var(--body-text-color);
+	font-family: var(--body-font);
+	margin: 0;
+	background: var(--white);
+	overflow-x: hidden; /* hides overflow from hidden navigation */
+	height: 100vh;
+}
+
+a, a:visited, a:hover {
+	text-decoration: none;
+}
+
+textarea, input {
+	-webkit-transition: border .5s ease-in-out;
+  transition: border .5s ease-in-out;
+}
+
+textarea:focus, input:focus {
+	border-color: none;
+}
+
+textarea:focus, input:focus, button:focus, button {
+    outline: blue;
+}
+
+button {
+	border: none;
+}
+
+#mobile1,
+#mobile2 {
+    width: 414px;
+    height: 736px;
+    border: 1px solid;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:40px;
+}
+
+.heading {
+    font-size: 3em;
+	color: var(--light-purple);
+	font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    margin: 50px;
+}
+
+.subheader {
+    font-size: 1.2em;
+    font-weight: 300;
+	color: var(--cream);
+    margin: 20px 50px;
+}
+
+.italic {
+    font-family: var(--body-font-italic);
+}
+
+.bold {
+    font-weight: 400;
+}
+
+.container {
+    background: var(--dark-purple);
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 20px 50px;
+    margin-bottom: 80px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.section-heading {
+    font-family: var(--heading-font);
+    color: var(--light-purple);
+    font-weight: var(--heading-weight);
+    font-size: 2em;
+    width: 100vw;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
+
+.sketch-container img {
+    height: 400px;
+    margin: 0 25px;
+    
+}
+
+.sketch-container img:first-child {
+    margin-left: 0;
+}
+
+.sketch-container img:last-child {
+    margin-right: 0;
+}
+
+.mockup-container img {
+    width: 80vw;
+}
+
+.visualization-container {
+    width: 800px;
+}
+
+
+/*========================================== */
+
+/* Fonts */
+
+/* Arca Majora 3 */
+
+@font-face {
+font-family: ArcaMajora;
+src: url(fonts/arca_majora_3/ArcaMajora3-Black.woff);
+font-weight: 900;
+}
+
+@font-face {
+font-family: ArcaMajora;
+src: url(fonts/arca_majora_3/ArcaMajora3-Heavy.woff);
+font-weight: 800;
+}
+
+/* Lato */
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Black.ttf);
+font-weight: 900;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Heavy.ttf);
+font-weight: 800;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Bold.ttf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Semibold.ttf);
+font-weight: 600;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Medium.ttf);
+font-weight: 500;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Regular.ttf);
+font-weight: 400;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Light.ttf);
+font-weight: 300;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Thin.ttf);
+font-weight: 200;
+}
+
+@font-face {
+font-family: Lato;
+src: url(fonts/lato/Lato-Hairline.ttf);
+font-weight: 100;
+}
+
+/* Italic */
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-BlackItalic.ttf);
+font-weight: 900;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-HeavyItalic.ttf);
+font-weight: 800;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-BoldItalic.ttf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-SemiboldItalic.ttf);
+font-weight: 600;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-MediumItalic.ttf);
+font-weight: 500;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-Italic.ttf);
+font-weight: 400;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-LightItalic.ttf);
+font-weight: 300;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-ThinItalic.ttf);
+font-weight: 200;
+}
+
+@font-face {
+font-family: LatoItalic;
+src: url(fonts/lato/Lato-HairlineItalic.ttf);
+font-weight: 100;
+}
