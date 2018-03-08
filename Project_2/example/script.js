@@ -207,6 +207,8 @@ function draw(error,data){
     var extentWeek = d3.extent(weekWeather,function(d){
         return new Date (d.time * 1000)
     });
+    
+    console.log(extentWeek);
 
     // 2.2 how do you want to show the information? By temperature (axis Y)
     // what are the min and maximum temperatures?

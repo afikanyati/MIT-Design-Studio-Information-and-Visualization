@@ -25,11 +25,24 @@
 </div>
 <h2 class="section-heading">Visualization I</h2>
 <div class="container visualization-container">
+    <div id="viz1">
+        <div class="col-md-12" id="plot1"></div>
+    </div>
+    <p class="explanation">
+        My first visualization of this Weather Visualization series focuses on Temperature and Time, but specifically the moments during each day important temperature-related events occur. For each day of the week, the time at which the highest and lowest temperature of the day are displayed, with the red line denoting temperature high and the blue line denoting temperature low. For each day of the week there is also a colored quadrilateral - the bottom and top edge represent sunrise and sunset respectively. The color of the quadrilateral gives the viewer a qualitative measurement of the day's temperature, as a comparison metric between other days.
+    </p>
 </div>
 <h2 class="section-heading">Visualization II</h2>
 <div class="container visualization-container">
+    <div id="viz2">
+        <div class="col-md-12" id="plot2"></div>
+    </div>
+    <p class="explanation">
+        My second visualization of this Weather Visualization series focuses on Wind over Time, namely Wind Bearing and Wind Speed over the course of a given day. Depicted is a Radial Graph, following the conventions of the Polar Coordinate System. Movement radially outwards from the origin represents the passage of time, with the origin representing the beginning of the day and the edge of the fourth ring representing the end of the day. For every hour of the day, Wind Speed and Wind Bearing are measured and are visualized by a colored circle; the angle offset made from North represents the wind bearing and the size and color of the circle represents the speed of the wind. Size is a more intuitive variable to visualize comparative data, however I decided to use color too because I felt the visualization could do with some extra stimulus. 
+    </p>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="assets/script.js"></script>
+<script src="assets/script1.js"></script>
+<script src="assets/script2.js"></script>
 </body>
 </html>
