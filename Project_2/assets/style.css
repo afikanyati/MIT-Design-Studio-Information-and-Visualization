@@ -101,6 +101,10 @@ button {
     box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 }
 
+.container.visualization-container {
+    flex-direction: column;
+}
+
 .section-heading {
     font-family: var(--heading-font);
     color: var(--light-purple);
@@ -110,13 +114,13 @@ button {
     margin: 0;
     margin-top: 50px;
     margin-left: 50px;
-    
+
 }
 
 .sketch-container img {
     width: 25vw;
     margin: 0 25px;
-    
+
 }
 
 .sketch-container img:first-child {
@@ -134,6 +138,159 @@ button {
 .visualization-container {
     width: 800px;
 }
+
+#viz1,
+#viz2 {
+    display: block;
+    width: 414px;
+    height: 736px;
+    margin: 0;
+    background: #d6d6eb;
+    border: none;
+    border-radius: 50px;
+}
+
+.week-weather .lines {
+    stroke: rgba(35, 31, 32, 0.12);
+    stroke-width: 1px;
+}
+
+.week-weather .max-lines {
+    stroke: #ed1b58;
+    stroke-width: 2px;
+}
+
+.week-weather .min-lines {
+    stroke: #35459c;
+    stroke-width: 2px;
+}
+
+.week-weather .day-block {
+    stroke: rgba(35, 31, 32, 0.12);
+    stroke-width: 1px;
+}
+
+.week-weather .day-temp:first-child {
+    stroke: #7a7cbb;
+    stroke-width: 3px;
+}
+
+.axis {
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: var(--body-weight);
+}
+
+.axis-y {
+    stroke-width: 2px;
+}
+
+.axis-label {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 10px;
+    color: #231f20;
+    alignment-baseline: middle;
+}
+
+circle {
+    fill: none;
+    stroke: rgba(35, 31, 32, 0.12);
+    stroke-width: 1px;
+}
+
+.circ-axis {
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: var(--body-weight);
+    fill: rgba(35, 31, 32, 0.30);
+}
+
+.inner-hor-circ-grid-lines,
+.outer-hor-circ-grid-lines,
+.inner-vert-circ-grid-lines,
+.outer-vert-circ-grid-lines {
+    stroke: rgba(35, 31, 32, 0.30);
+    stroke-width: 2px;
+}
+
+.directions {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 15px;
+    fill: rgba(35, 31, 32, 0.80);
+    alignment-baseline: middle;
+}
+
+.viz-heading {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 15px;
+    alignment-baseline: middle;
+    fill: #ffffff;
+}
+
+.viz-key-heading {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+    font-size: 15px;
+    alignment-baseline: middle;
+    fill: #000000;
+}
+
+.viz-key-text {
+    font-family: var(--body-font);
+    font-weight: var(--body-weight);
+    font-size: 12px;
+}
+
+.stop-left {
+    stop-color: #e6f5fd;  /* Indigo */
+}
+
+.stop-mid-left {
+    stop-color: #8ed4f5;  /* Teal */
+}
+
+.stop-mid-right {
+    stop-color: #f7951f;  /* Teal */
+}
+
+.stop-right {
+    stop-color: #922b1e;  /* Teal */
+}
+
+.filled {
+    fill: url(#mainGradient);
+}
+
+.outlined {
+    fill:   none;
+    stroke: url(#mainGradient);
+    stroke-width: 4;
+}
+
+.key-line {
+    stroke-width: 3px;
+}
+
+.key-line.blue {
+    stroke: #35459c;
+}
+
+.key-line.red {
+    stroke: #ed1b58;
+}
+
+.explanation {
+    color: var(--light-gray);
+    font-family: var(--body-font);
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 0;
+    margin-top: 50px;
+}
+
 
 
 /*========================================== */
