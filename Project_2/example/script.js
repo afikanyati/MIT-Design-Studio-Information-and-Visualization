@@ -20,27 +20,6 @@ var plot2 = d3.select('#plot2') // if we select a html id #name, if we select a 
 
 // var url = 'https://api.darksky.net/forecast/c6b293fcd2092b65cfb7313424b2f7ff/42.361145,-71.057083'
 
-<<<<<<< HEAD
-$.ajax({
-    url: 'https://api.darksky.net/forecast/c6b293fcd2092b65cfb7313424b2f7ff/42.361145,-71.057083',
-    dataType: 'JSONP',
-    type: 'GET',
-    crossDomain: true,
-    complete: function (json) {
-        if (json.readyState == '4' && json.status == '200') {
-            draw(json.responseJSON)
-        } else {
-            console.log("DATA FETCH FAILED")
-        }
-    }
-});
-
-// d3.json("../data/boston_weather.json",draw);
-
-function draw(data){
-
-    console.log(data)
-=======
 d3.json("../data/boston_weather.json", draw);
 
 function draw(error,data){
@@ -64,14 +43,13 @@ function draw(error,data){
 //        console.log("----------");
 //        console.log(" ");
 //    }
-//    
+//
 //    for (i = 0; i < 24; i++) {
 //        var x = data.hourly.data;
 //        console.log(x[i].windSpeed);
 //        console.log("----------");
 //        console.log(" ");
 //    }
->>>>>>> mockups for project 2
 
     //PLOT 1 - today's weather
     var todayWeather = data.hourly.data;
@@ -207,7 +185,7 @@ function draw(error,data){
     var extentWeek = d3.extent(weekWeather,function(d){
         return new Date (d.time * 1000)
     });
-    
+
     console.log(extentWeek);
 
     // 2.2 how do you want to show the information? By temperature (axis Y)
