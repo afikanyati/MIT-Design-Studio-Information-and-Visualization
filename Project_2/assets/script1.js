@@ -324,7 +324,7 @@ function drawPlot1(error,data){
 
     plot1
         .append("line")
-        .attr("class", "key-line blue")
+        .attr("class", "key-line red")
         .attr("x1",function(d) {
             return margin1.l;
         })
@@ -340,7 +340,7 @@ function drawPlot1(error,data){
 
     plot1
         .append("line")
-        .attr("class", "key-line red")
+        .attr("class", "key-line blue")
         .attr("x1",function(d) {
             return margin1.l;
         })
@@ -380,5 +380,5 @@ function drawPlot1(error,data){
         .attr("class", "viz-key-text")
         .attr('transform', "translate(" + (width1 + 70 + 5) +  "," + (32) + ")")
         .style("text-anchor", "middle")
-        .text("140");
+        .text("140F");
 }
