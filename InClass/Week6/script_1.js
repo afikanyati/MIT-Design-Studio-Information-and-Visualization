@@ -13,6 +13,8 @@ var plot1 = d3.select('#plot1') // if we select a html id #name, if we select a 
 // function to draw the map
 var populationPerState = d3.map();
 
+var populationPerState = d3.map();
+
 // queue data files, parse them and use them
 var queue = d3.queue()
     .defer(d3.csv, "data/data.csv", parseData)
@@ -39,7 +41,7 @@ function dataloaded (err,data,map){
 
     // Bind the data to the SVG and create one path per GeoJSON feature
     var path = d3.geoPath();
-    
+
     plot1.selectAll(".state")
         .data(topojson.feature(map, map.objects.states).features)
         .enter()
@@ -81,7 +83,7 @@ function parsePopulation(d){
     } else {
         id = d["Geographic Area"];
     }
-    
+
     populationPerState.set(id, {
         state: d["Geographic Area"],
         april2010: +d["April 1, 2010, Census"],
